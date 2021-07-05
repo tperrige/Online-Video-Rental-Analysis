@@ -1,4 +1,4 @@
--- Find top 10 countries and their revenue by number of customers (data used to create scatterplot)
+-- Find top 10 countries and their revenue by number of customers (data used to create scatterplot in Tableau)
 
 SELECT  E.country,
         COUNT(B.customer_id) AS number_of_customers,
