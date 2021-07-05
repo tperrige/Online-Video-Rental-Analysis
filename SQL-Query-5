@@ -8,8 +8,8 @@ SELECT  A.customer_id,
         SUM(A.amount) AS total_amount_paid		
 FROM			
 	(SELECT D.city,
-          top_countries.country,
-          COUNT(B.customer_id)	
+          	top_countries.country,
+          	COUNT(B.customer_id)	
 	FROM 		
 		(SELECT E.country,
             		COUNT(B.customer_id)
@@ -24,8 +24,8 @@ FROM
 	INNER JOIN city D ON E.country_id = D.country_id		
 	INNER JOIN address C ON D.city_id = C.city_id		
 	INNER JOIN customer B ON C.address_id = B.address_id		
-	GROUP BY  D.city,
-            top_countries.country	
+	GROUP BY D.city,
+		top_countries.country	
 	ORDER BY COUNT(B.customer_id) DESC		
 	LIMIT 10) AS top_cities		
 INNER JOIN city D ON top_cities.city = D.city			
