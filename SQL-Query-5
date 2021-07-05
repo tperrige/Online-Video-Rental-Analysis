@@ -12,7 +12,7 @@ FROM
           COUNT(B.customer_id)	
 	FROM 		
 		(SELECT E.country,
-            COUNT(B.customer_id)
+            		COUNT(B.customer_id)
 		FROM customer B	
 		INNER JOIN address C ON B.address_id = C.address_id	
 		INNER JOIN city D ON c.city_id = D.city_id	
@@ -39,4 +39,4 @@ GROUP BY  A.customer_id,
           top_cities.city,
           E.country		
 ORDER BY total_amount_paid DESC			
-LIMIT 5			
+LIMIT 5
