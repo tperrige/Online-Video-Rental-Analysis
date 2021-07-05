@@ -5,7 +5,7 @@ SELECT  D.city,
         COUNT(B.customer_id)	
 FROM		
 	(SELECT E.country,
-          COUNT(B.customer_id)
+          	COUNT(B.customer_id)
 	FROM customer B	
 	INNER JOIN address C ON B.address_id = C.address_id	
 	INNER JOIN city D ON c.city_id = D.city_id	
@@ -18,6 +18,6 @@ INNER JOIN city D ON E.country_id = D.country_id
 INNER JOIN address C ON D.city_id = C.city_id		
 INNER JOIN customer B ON C.address_id = B.address_id		
 GROUP BY D.city,	
-	     top_countries.country	
+	 top_countries.country	
 ORDER BY COUNT(B.customer_id) DESC		
-LIMIT 10		
+LIMIT 10
