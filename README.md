@@ -1,4 +1,4 @@
-# Rockbuster-Data-Analysis
+# Online-Video-Rental-Analysis
 Analyzing data about movie rentals and customers to answer business questions leading to the launch of an online video rental service.
 
 In this project, I analyzed data from the fictional DVD rental company, Rockbuster Stealth LLC, to help with their launch strategy for a new online video rental service. First, I loaded Rockbuster’s data into a relational database management system (RDBMS), and then used SQL to analyze the data and answer complex business questions. Finally, I created visualizations of the results in Tableau and used them to make a presentation for the management team.  
